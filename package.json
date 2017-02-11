@@ -1,0 +1,22 @@
+{
+  "name": "pdfgenerator",
+  "version": "1.0.0",
+  "description": "Generate Donation Receipts with PDFkit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrLoh/pdf-donation-receipt-generator.git"
+  },
+  "author": "MrLoh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrLoh/pdf-donation-receipt-generator/issues"
+  },
+  "homepage": "https://github.com/MrLoh/pdf-donation-receipt-generator#readme",
+  "dependencies": {
+    "pdfkit": "^0.8.0"
+  }
+}
