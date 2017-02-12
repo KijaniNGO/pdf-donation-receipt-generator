@@ -1,9 +1,18 @@
+fs = require('fs')
+readCSV = require('csv-load-sync')
+
+let data = readCSV('../inge-geburtstagsspenden.csv');
+data = data.map((d) => Object.assign(d, {address: d.address.replace('\\n', '\n')}))
+
 const generate_receipt = require('./donation-receipt-generator').generate
 
-// generate document
+for (let info of data) {
+    generate_receipt(info, `Spendenbescheinigung_${info.filename}_2017.pdf`)
+}
+
 generate_receipt({
     name: 'Tobias Lohse',
-    address: 'Wilhelmshavener Str. 22 \n10551 Berlin',
-    date: '11.2.2017',
-    amount: 123.999
+    address: 'Franziusweg 65\n12307 Berlin',
+    amount: 145.50,
+    date: '1.1.2020'
 })

@@ -2,7 +2,7 @@
 PDFDocument = require('pdfkit')
 fs = require('fs')
 
-const generatePdf = (contentWriter, filename='out.pdf') => {
+const generatePdf = (contentWriter, filename='example.pdf') => {
     let doc = new PDFDocument({
         size: 'a4',
         margins: {top: 0, bottom: 0, left: 50, right: 50}
@@ -56,7 +56,7 @@ const logo = svgs.logo
 const signature = svgs.signature
 
 // define page content
-exports.generate = ({name, address, date, amount}) => generatePdf((doc) => {
+exports.generate = ({name, address, date, amount}, filename) => generatePdf((doc) => {
 
     // HEADER
     logo(doc, green, 130, 50, 50)
@@ -123,4 +123,4 @@ exports.generate = ({name, address, date, amount}) => generatePdf((doc) => {
        .text('Hinweise: ', 50, 715, {continued: true})
     doc.font(merriweather_italic)
        .text('Diese Zuwendungsbestätigung wird gemäß unserer schriftlichen Anzeige beim Finanzamt Berlin vom 12.2.2014 automatisiert unterschrieben. | Wer vorsätzlich oder grob fahrlässig eine unrichtige Zuwendungsbestätigung erstellt oder wer veranlasst, dass Zuwendungen nicht zu den in der Zuwendungsbestätigung angegebenen steuerbegünstigten Zwecken verwendet werden, haftet für die entgangene Steuer (§ 10b Abs. 4 EStG, § 9 Abs. 3 KStG, § 9 Nr. 5 GewStG). | Diese Bestätigung wird nicht als Nachweis für die steuerliche Berücksichtigung der Zuwendung anerkannt, wenn das Datum des Freistellungsbescheides länger als 5 Jahre bzw. das Datum der vorläufigen Bescheinigung länger als 3 Jahre seit Ausstellung der Bestätigung zurückliegt (BMF vom 15.12.1994 - BStBl I S. 884).', {align: 'justify'})
-}, filename='example.pdf')
+}, filename)

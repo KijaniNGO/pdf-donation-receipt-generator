@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/MrLoh/pdf-donation-receipt-generator#readme",
   "dependencies": {
+    "csv-load-sync": "^1.0.0",
     "pdfkit": "^0.8.0"
   }
 }
