@@ -4,7 +4,7 @@ Skript um automatisch Spendenquittungen zu generieren.
 
 ## Nutzung
 
-Um Spendenquittungen zu generieren kann die `generate` Funktion aus `donation-receipt-generator` verwendet werden. Diese nimmt ein Objekt mit allen Informationen zur Spende: `{name, address, amount, data}` und einen Dateinamen der zu generierenden Datei entgegen. Das Resultat ist ein PDF wie [dieses](example.pdf)
+Um Spendenquittungen zu generieren kann die `generate` Funktion aus `donation-receipt-generator` verwendet werden. Diese nimmt ein Objekt mit allen Informationen zur Spende: `{name, address, amount, date}` und einen Dateinamen der zu generierenden Datei entgegen. Das Resultat ist ein PDF wie [dieses](example.pdf)
 
 Hier ein Beispiel Skript zur Generierung einer Spendenquittung:
 
